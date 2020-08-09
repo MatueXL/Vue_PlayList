@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>数据&方法</title>
+    <title>属性绑定</title>
 </head>
 
 <body>
@@ -12,6 +12,8 @@
         <h1>{{Greet('Night')}}</h1>
         <p>{{name}}</p>
         <p>{{job}}</p>
+        <a :href="webSite">bilibili</a>
+        <p v-html="webSiteTag">bilibili</p>
     </div>
 
     <script type="text/javascript" src="https://unpkg.com/vue"></script>
