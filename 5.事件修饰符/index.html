@@ -36,7 +36,7 @@
             <p>.once: 仅仅执行一次</p>
             <input type="button" value="Once Click" @click.once="Alert()">
         </div>
-
+ 
         <div>
             <p>.self 当前元素才能触发（冒泡也并不会执行）</p>
             <div @click.self="Alert()"
