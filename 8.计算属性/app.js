@@ -14,6 +14,9 @@ new Vue({
             console.log('AddToB');
             return this.age + this.b;
         },
+        AddToC() {
+            console.log('AddToC');
+        },
     },
     methods: {
         // AddToA() {

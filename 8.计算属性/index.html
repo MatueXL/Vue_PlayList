@@ -32,4 +32,10 @@
  * 改成computed
  * 首次加载也会触发页面上绑定的方法
  * 但a/b值发生改变时，只会触发对应的方法。。。
+ * computed有缓存功能，如果我把AddToA()方法里的加等于去掉，点击按钮就不会重复进入这个方法！（假如计算结果没变化，直接返回结果）
+ *
+ * computed和methods的区别点
+ * 1. computed是属性调用，methods是函数调用
+ * 2. computed有缓存功能
+ * 3. computed修改data的值，并不会重新渲染dom，只渲染涉及的部分！
  */
