@@ -1,0 +1,30 @@
+#age {
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    background: url(imgs/young.webp) center no-repeat;
+}
+
+#age.oldImg {
+    background: url(imgs/old.webp) center no-repeat !important;
+}
+
+#ageSize {
+    width: 200px;
+    border: 2px #000000 solid;
+    margin: 20px auto 20px auto;
+}
+
+#ageSize div {
+    height: 20px;
+    background-color: crimson;
+}
+
+#controls {
+    width: 200px;
+    margin: 0 auto;
+}
+
+#controls button {
+    margin-left: 20px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="age" :class="{oldImg: ended}"></div>
+        <div id="ageSize">
+            <div :style="{width: ageSize + '%'}"></div>
+        </div>
+
+        <div id="controls">
+            <button @click="addAge()" v-show="!ended">增加一岁</button>
+            <button @click="restart()">时光倒流</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
