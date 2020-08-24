@@ -1,6 +1,6 @@
 <template>
   <Footer>
-    <p>{{title}}</p>
+    <p>{{title}}{{parentTitle}}</p>
   </Footer>
 </template>
 
@@ -10,6 +10,12 @@ export default {
   data() {
     return {
       title: 'Copyright 2020 Vue.js Demo!'
+    }
+  },
+  props: {
+    parentTitle: {
+      type: String,
+      required: true,
     }
   }
 }

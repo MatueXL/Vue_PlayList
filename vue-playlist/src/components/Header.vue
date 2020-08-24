@@ -1,6 +1,6 @@
 <template>
-  <header>
-    <h1>{{title}}</h1>
+  <header @click="changeParentTitle()">
+    <h1>{{title}} {{parentTitle}}</h1>
   </header>
 </template>
 
@@ -10,6 +10,17 @@ export default {
   data() {
     return {
       title: 'Vue.js Demo'
+    }
+  },
+  props: {
+    parentTitle: {
+      type: String,
+      required: true,
+    }
+  },
+  methods: {
+    changeParentTitle() {
+      this.parentTitle = 'changed!';
     }
   }
 }

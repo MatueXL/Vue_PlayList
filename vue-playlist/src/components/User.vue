@@ -10,6 +10,8 @@
         <h3 v-show="user.show">{{user.position}}</h3>
       </li>
     </ul>
+
+    <button @click="deleteUser()">删除</button>
   </div>
 </template>
 
@@ -24,6 +26,10 @@ export default {
     User: {
       type: Array,
       required: true
+    }
+  }, methods: {
+    deleteUser() {
+      this.User.pop();
     }
   }
 }

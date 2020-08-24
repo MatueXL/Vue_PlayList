@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <Header></Header>
-    <User :users="User"></User>
-    <Footer></Footer>
+    <Header :parentTitle="title"></Header>
+    <User :User="User"></User>
+    <User :User="User"></User>
+    <Footer :parentTitle="title"></Footer>
   </div>
 </template>
 
@@ -25,7 +26,8 @@ export default {
         { name: 'MatueXL', position: 'Web开发', show: false },
         { name: 'MatueXL', position: 'Web开发', show: false },
         { name: 'MatueXL', position: 'Web开发', show: false },
-      ]
+      ],
+      title: '传递的是一个值（string/number/boolean）',
     }
   },
   components: {
