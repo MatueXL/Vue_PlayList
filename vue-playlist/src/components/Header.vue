@@ -20,7 +20,8 @@ export default {
   },
   methods: {
     changeParentTitle() {
-      this.parentTitle = 'changed!';
+      // this.parentTitle = 'changed!';
+      this.$emit('changeParentTitle','Change Parent Title By Children Component!');
     }
   }
 }

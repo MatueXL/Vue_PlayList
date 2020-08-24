@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <Header :parentTitle="title"></Header>
+    <Header
+      :parentTitle="title"
+      @changeParentTitle="updateTitle($event)"
+    ></Header>
     <User :User="User"></User>
     <User :User="User"></User>
     <Footer :parentTitle="title"></Footer>
@@ -34,6 +37,11 @@ export default {
     User,
     Header,
     Footer
+  },
+  methods: {
+    updateTitle(e) {
+      this.title = e;
+    }
   }
 }
 </script>
