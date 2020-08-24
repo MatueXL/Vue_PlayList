@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <HelloWord></HelloWord>
+    <Header></Header>
+    <User></User>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 
-import HelloWord from './components/HelloWorld';
+import User from './components/User';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default {
   name: 'App',
   components: {
-    HelloWord,
+    User,
+    Header,
+    Footer
   }
 }
 </script>
@@ -23,6 +29,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
