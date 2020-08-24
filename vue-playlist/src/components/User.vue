@@ -17,18 +17,15 @@
 export default {
   data() {
     return {
-      User: [
-        { name: 'MatueXL', position: 'Web开发', show: false },
-        { name: 'Gary', position: '程序员', show: false },
-        { name: 'Troy', position: '码畜', show: false },
-        { name: 'Emily', position: '学生', show: false },
-        { name: 'MatueXL', position: 'Web开发', show: false },
-        { name: 'MatueXL', position: 'Web开发', show: false },
-        { name: 'MatueXL', position: 'Web开发', show: false },
-        { name: 'MatueXL', position: 'Web开发', show: false },
-      ]
+
     }
   },
+  props: {
+    User: {
+      type: Array,
+      required: true
+    }
+  }
 }
 </script>
 
