@@ -4,10 +4,7 @@
       :parentTitle="title"
       @changeParentTitle="updateTitle($event)"
     ></Header>
-    <User :User="userList">
-      <p slot="title">slot插槽可以将html从父组件传递给子组件，并且可以为多个slot声明唯一标识符（slot="XX"），后续在子组件中用slot标签加name属性关联即可！</p>
-      <p slot="footer">Slot Footer!</p>
-    </User>
+    <User :User="userList"></User>
     <Footer :parentTitle="title"></Footer>
   </div>
 </template>

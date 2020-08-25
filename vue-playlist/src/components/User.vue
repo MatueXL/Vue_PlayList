@@ -1,6 +1,5 @@
 <template>
   <div class="users">
-    <slot name="title"></slot>
     <p>test</p>
     <ul>
       <li
@@ -11,7 +10,6 @@
         <h3>{{user.website}}</h3>
       </li>
     </ul>
-    <slot name="footer"></slot>
     <button @click="deleteUser()">删除</button>
   </div>
 </template>

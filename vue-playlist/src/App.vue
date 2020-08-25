@@ -3,7 +3,8 @@
     <div>
       <ul>
         <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/helloworld">HelloWorld</router-link>></li>
+        <li><router-link to="/helloworld">HelloWorld</router-link></li>
+        <li><router-link to="/formhelper">dynamics component</router-link></li>
       </ul>
     </div>
     <router-view>

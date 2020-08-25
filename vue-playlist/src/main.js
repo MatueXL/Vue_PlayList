@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import App from './App.vue'
 import Home from './components/Home';
-import HelloWorld from './components/HelloWorld';
+import HelloWorld from './components/HelloWorld'
+import FormHelper from './components/FormHelper'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter);
@@ -14,6 +15,7 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: Home },
     { path: '/helloworld', component: HelloWorld },
+    { path: '/formhelper', component: FormHelper },
   ],
   mode: 'history'
 });
