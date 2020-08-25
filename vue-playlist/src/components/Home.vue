@@ -21,14 +21,7 @@ export default {
   data() {
     return {
       User: [
-        { name: 'MatueXL', position: 'Web开发', show: false },
-        { name: 'Gary', position: '程序员', show: false },
-        { name: 'Troy', position: '码畜', show: false },
-        { name: 'Emily', position: '学生', show: false },
-        { name: 'MatueXL', position: 'Web开发', show: false },
-        { name: 'MatueXL', position: 'Web开发', show: false },
-        { name: 'MatueXL', position: 'Web开发', show: false },
-        { name: 'MatueXL', position: 'Web开发', show: false },
+
       ],
       title: '传递的是一个值（string/number/boolean）',
     }
@@ -42,7 +35,13 @@ export default {
     updateTitle(e) {
       this.title = e;
     }
-  }
+  },
+  created() {
+    this.$http.get('https://jsonplaceholder.typicode.com/users')
+      .then((data) => {
+        this.User = data.body;
+      });
+  },
 }
 </script>
 

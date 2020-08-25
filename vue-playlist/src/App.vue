@@ -2,8 +2,8 @@
   <div id="app">
     <div>
       <ul>
-        <li><a href="/"> Home</a></li>
-        <li><a href="/helloworld">HelloWorld</a></li>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/helloworld">HelloWorld</router-link>></li>
       </ul>
     </div>
     <router-view>
