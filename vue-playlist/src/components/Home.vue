@@ -4,8 +4,10 @@
       :parentTitle="title"
       @changeParentTitle="updateTitle($event)"
     ></Header>
-    <User :User="User"></User>
-    <User :User="User"></User>
+    <User :User="userList">
+      <p slot="title">slot插槽可以将html从父组件传递给子组件，并且可以为多个slot声明唯一标识符（slot="XX"），后续在子组件中用slot标签加name属性关联即可！</p>
+      <p slot="footer">Slot Footer!</p>
+    </User>
     <Footer :parentTitle="title"></Footer>
   </div>
 </template>
@@ -15,13 +17,19 @@
 import User from './User';
 import Header from './Header';
 import Footer from './Footer';
+import axios from 'axios';
 
 export default {
   name: 'Home',
   data() {
     return {
-      User: [
+      userList: [
 
+      ],
+      testList: [
+        { name: 'MatueXL', website: 'https://matuexl.com' },
+        { name: 'MatueXL', website: 'https://matuexl.com' },
+        { name: 'MatueXL', website: 'https://matuexl.com' }
       ],
       title: '传递的是一个值（string/number/boolean）',
     }
@@ -37,10 +45,47 @@ export default {
     }
   },
   created() {
-    this.$http.get('https://jsonplaceholder.typicode.com/users')
-      .then((data) => {
-        this.User = data.body;
-      });
+    // vue-resource
+    // this.$http.get('https://jsonplaceholder.typicode.com/users')
+    //   .then((data) => {
+    //     this.userList = data.body;
+    //   });
+
+    // fetch-get
+    // fetch('https://jsonplaceholder.typicode.com/users')
+    //   .then(data => {
+    //     return data.json(); // 这是fetch的固定写法
+    //   })
+    //   .then(user => {
+    //     this.userList = user;
+    //   })
+
+    // fetch-post
+    // fetch('https://jsonplaceholder.typicode.com/users', {
+    //   methods: 'POST',
+    //   body: JSON.stringify(this.User),
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    // })
+    //   .then(data => {
+    //     return data.json();
+    //   }).then(user => {
+    //     this.userList = user;
+    //   })
+
+    // axios-get
+    // axios.get('https://jsonplaceholder.typicode.com/users')
+    //   .then(res => {
+    //     this.userList = res.data;
+    //   })
+
+    // axios-post
+    // axios.post('https://jsonplaceholder.typicode.com/users', this.testList)
+    //   .then(res => {
+    //     console.log(res.data);
+    //     this.userList = res.data;
+    //   })
   },
 }
 </script>

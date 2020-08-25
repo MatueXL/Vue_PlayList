@@ -1,16 +1,17 @@
 <template>
   <div class="users">
+    <slot name="title"></slot>
+    <p>test</p>
     <ul>
       <li
         v-for="(user,i) in User"
         :Key="i"
-        @click="user.show = !user.show"
       >
         <h2>{{user.name}}</h2>
-        <h3 v-show="user.show">{{user.position}}</h3>
+        <h3>{{user.website}}</h3>
       </li>
     </ul>
-
+    <slot name="footer"></slot>
     <button @click="deleteUser()">删除</button>
   </div>
 </template>
